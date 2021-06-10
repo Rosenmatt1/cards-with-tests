@@ -1,0 +1,137 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.counter-container {
+  margin-right: -2rem;
+}
+
+.counter {
+  font-family: Alfa Slab One;
+}
+
+.playAgainContainer {
+  margin-right: -5rem;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.deal-container {
+  margin-right: -10rem;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.deal {
+  font-family: Alfa Slab One;
+}
+
+.card1 {
+  font-family: Rockwell;
+  position: relative;
+  animation-name: movecard;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+}
+
+.card2 {
+  font-family: Rockwell;
+  position: relative;
+  animation-name: movecard;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.card3 {
+  font-family: Rockwell;
+  position: relative;
+  animation-name: movecard;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.card4 {
+  font-family: Rockwell;
+  position: relative;
+  animation-name: movecard;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.card5 {
+  font-family: Rockwell;
+  position: relative;
+  animation-name: movecard;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.last-card1 {
+  font-family: Rockwell;
+  position: relative;
+  animation-name: movecard;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+}
+
+.last-card2 {
+  font-family: Rockwell;
+  position: relative;
+  animation-name: movecard;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes movecard {
+  0% {
+    top: -600px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.suit-name {
+  font-size: 5.5rem;
+  font-weight: 900;
+}
+
+.dealer {
+  margin-right: -4rem;
+}
+
+.loser {
+  margin-right: -11.5rem;
+}
+
+.winner {
+  position: relative;
+  animation-name: winner;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  top: 5rem !important;
+  left: 23rem;
+}
+
+@keyframes winner {
+  0% {
+    top: -10rem;
+  }
+  100% {
+    top: 20rem;
+  }
+}
+
+.reset {
+  font-family: Alfa Slab One;
+}
