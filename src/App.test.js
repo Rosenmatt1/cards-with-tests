@@ -2,10 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { configure } from 'enzyme'
 import Enzyme, { shallow, mount } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
+Enzyme.configure({adapter: new Adapter()})
 import App from './App'
 // import PokerMain from './components/PokerMain.js'
-// import Deal from './components/Deal.js'
+import Deal from './components/Deal.js'
+
 
 configure({ adapter: new Adapter() })
 
@@ -24,4 +26,17 @@ it('renders without crashing', () => {
 it('my first test', () => {
   const isTrue = true
   expect(isTrue).toBe(true)
+})
+
+describe('Deal Component Test', () => {
+  const onCountChange = jest.fn()
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = mount(<Deal onCountChange={onCountChange} />)
+  })
+
+  it('renders', () => {
+    expect(wrapper).not.toBeNull()
+  })
 })

@@ -9,7 +9,7 @@ import flick from '../assets/card-flick.wav'
 
 const Deal = ({ data }) => {
   const fullDeck = JSON.parse(localStorage.getItem('fullDeck'))
-  const [cards, setCards] = useState(data)
+  const [cards, setCards] = useState(null)
   const [winner, setWinner] = useState(false)
   const [newDeal, setNewDeal] = useState(true)
   const [card1, setCard1] = useState(null)
@@ -67,6 +67,10 @@ const Deal = ({ data }) => {
       setWinner(false)
     }
   }
+
+  useEffect(() => {
+    setCards(data)
+  }, [])
 
   // This useEffect was used to solve a render issue in checkWin() where card1 and card2 was using the previous state value
   useEffect(() => {
